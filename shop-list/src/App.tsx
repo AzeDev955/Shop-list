@@ -1,11 +1,17 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Route, Routes, BrowserRouter } from "react-router";
 import "./App.css";
 import { Header } from "./components/Header/Header";
 
 function App() {
-  return <Header />;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/productos" element={<Header />}></Route>
+        <Route path="/listas" element={<Header />}></Route>
+        <Route path="/login" element={<Header />}></Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

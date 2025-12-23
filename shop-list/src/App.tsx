@@ -5,6 +5,7 @@ import { Header } from "./components/Header/Header";
 function App() {
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path="/productos" element={<Header />}></Route>
         <Route path="/listas" element={<Header />}></Route>
